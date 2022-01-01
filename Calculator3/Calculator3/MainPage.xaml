@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator3.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="5" CornerRadius="0">
+            <Label Text="Calculator" HorizontalTextAlignment="Center" TextColor="LawnGreen" FontSize="16"/>
+        </Frame>
+        <Grid>
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="500"></ColumnDefinition>
+                <ColumnDefinition Width="500"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="500"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" Grid.Column="0">
+                <!--Enter first number-->
+        <Label Text="First number" FontSize="15" Padding="30,5,30,5" TextColor="DarkRed"/>
+        <Entry x:Name="number1" Placeholder="Enter number1" />
+
+        <!--Enter Second number-->
+        <Label Text="SECOND number2 or percentage (If applicable)" FontSize="15" Padding="30,5,30,5" TextColor="Blue"/>
+        <Entry x:Name="number2" Placeholder="Enter number2" />
+
+        <!--Select Operation-->
+        <Label Text="SELECT Add,Minus,Multiply, Divide or percentage, please " FontSize="15" Padding="30,0,30,0" TextColor="DarkOliveGreen"/>
+        <Entry x:Name="operation" Placeholder="Enter eperation" />
+        <Button Text="Click here for Result!"                 
+                Clicked="Button_Click"                
+                WidthRequest="40"
+                HeightRequest="40"
+                CornerRadius="25"
+                BorderWidth="5"
+                BackgroundColor="Green"
+                BorderColor="Red"
+                
+                TextColor="Blue"/>
+        <!--Obtain Result-->
+        <Label x:Name="label3" Text="RESULT HERE" TextColor="DarkSlateBlue" FontSize="15" Padding="30,0,30,0"/>
+            </Frame>
+            <Frame Grid.Row="0" Grid.Column="0">
+                <!--Some new functionality-->
+        <Label Text=" SOME NEW FUNCTIONALITY  (Ex: Pi, Sqrt, etc.)" FontSize="15" Padding="30,0,30,0" TextColor="DarkOliveGreen" />
+        <!--Enter Radius-->
+        <Label Text="Radius" FontSize="15" Padding="30,5,30,5" TextColor="DarkRed"/>
+        <Entry x:Name="radius" Placeholder="radius" />
+
+        <!--Enter Height-->
+       
+        <Label Text="Height" FontSize="15" Padding="30,5,30,5" TextColor="Blue"/>
+        <Entry x:Name="height" Placeholder="height" />
+        <Button Text="SOME NEW FUNCTIONALITY"                 
+                Clicked="Calculate_Volume"                
+                WidthRequest="40"
+                HeightRequest="40"
+                CornerRadius="25"
+                BorderWidth="5"
+                BackgroundColor="Green"
+                BorderColor="Red"
+                
+                TextColor="Blue"/>
+        <Label x:Name="volume" Text="RESULT HERE" TextColor="DarkSlateBlue" FontSize="10" Padding="30,0,30,0"/>
+          <Label Text="Enter number" FontSize="15" Padding="30,5,30,5" TextColor="Blue"/>
+        <Entry x:Name="Number" Placeholder="number" />
+        <Button Text="Calculate Square root"                 
+                Clicked="Calculate_SquareRoot"                
+                WidthRequest="40"
+                HeightRequest="40"
+                CornerRadius="25"
+                BorderWidth="5"
+                BackgroundColor="Green"
+                BorderColor="Red"
+                
+                TextColor="Blue"/>
+        <Label x:Name="SquareRoot" Text="RESULT HERE" TextColor="DarkSlateBlue" FontSize="15" Padding="30,0,30,0"/>
+         </Frame>
+        </Grid>
+
+    </StackLayout>
+  
+</ContentPage>
