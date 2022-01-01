@@ -8,14 +8,14 @@
             <Label Text="Calculator" HorizontalTextAlignment="Center" TextColor="LawnGreen" FontSize="16"/>
         </Frame>
         <Grid>
-            <Grid.ColumnDefinitions >
-                <ColumnDefinition Width="500"></ColumnDefinition>
-                <ColumnDefinition Width="500"></ColumnDefinition>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="500"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Frame Grid.Row="0" Grid.Column="0">
+            <StackLayout Grid.Row="0" Grid.Column="0">
                 <!--Enter first number-->
         <Label Text="First number" FontSize="15" Padding="30,5,30,5" TextColor="DarkRed"/>
         <Entry x:Name="number1" Placeholder="Enter number1" />
@@ -39,8 +39,8 @@
                 TextColor="Blue"/>
         <!--Obtain Result-->
         <Label x:Name="label3" Text="RESULT HERE" TextColor="DarkSlateBlue" FontSize="15" Padding="30,0,30,0"/>
-            </Frame>
-            <Frame Grid.Row="0" Grid.Column="0">
+            </StackLayout>
+            <StackLayout Grid.Row="0" Grid.Column="1">
                 <!--Some new functionality-->
         <Label Text=" SOME NEW FUNCTIONALITY  (Ex: Pi, Sqrt, etc.)" FontSize="15" Padding="30,0,30,0" TextColor="DarkOliveGreen" />
         <!--Enter Radius-->
@@ -75,7 +75,7 @@
                 
                 TextColor="Blue"/>
         <Label x:Name="SquareRoot" Text="RESULT HERE" TextColor="DarkSlateBlue" FontSize="15" Padding="30,0,30,0"/>
-         </Frame>
+         </StackLayout>
         </Grid>
 
     </StackLayout>
